@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <div class="form">
+            <div class="book-info">
+                Book Title <br>
+                <input type="text" placeholder="title" id="book-title" required>
+            </div>
+            <div class="book-info">
+                Author <br>
+                <input type="text" placeholder="Author" id="book-author" required>
+            </div>
+            <div class="book-info">
+                Pages <br>
+                <input type="number" id="book-pages" required>
+            </div>
+            <div class="book-info">
+                Read? yes<input type="radio" name="read" class="book-read">
+                no<input type="radio" name="read" class="book-read">
+            </div>
+            <div class="book-info">
+                Description <br>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="book-info">
+                Cover <br>
+                <input type="file" name="" id="">
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+
+        <a href="#">Add new Book</a>
+        <table>
+            <tr>
+                <th>Cover</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read?</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><img src="covers/thehobbit.jpg" alt="The hoobit book cover"></td>
+                <td>The Hobbit</td>
+                <td>J. R. R. Tolkien</td>
+                <td>310</td>
+                <td>Yes</td>
+                <td>The Hobbit is set within Tolkien's fictional universe and follows the quest of home-loving Bilbo Baggins, the titular hobbit, to win a share of the treasure guarded by Smaug the dragon. Bilbo's journey takes him from light-hearted, rural surroundings into more sinister territory.</td>
+            </tr>
+        </table>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
