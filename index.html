@@ -22,41 +22,30 @@
                 <input type="number" id="book-pages" required>
             </div>
             <div class="book-info">
-                Read? yes<input type="radio" name="read" class="book-read">
-                no<input type="radio" name="read" class="book-read">
+                Read? yes<input type="radio" name="read" class="book-read" value="yes" required>
+                no<input type="radio" name="read" class="book-read" value="no" required>
             </div>
-            <div class="book-info">
-                Description <br>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div class="book-info">
-                Cover <br>
-                <input type="file" name="" id="">
-            </div>
-            <button type="submit">Submit</button>
+            <input type="button" value="back" id="backBtn">
+
+            <input type="button" value="Submit" id="submitBtn">
         </div>
     </form>
 
 
-        <a href="#">Add new Book</a>
+        <a href="#" id="add-new-book">Add new Book</a>
         <table>
-            <tr>
-                <th>Cover</th>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Pages</th>
-                <th>Read?</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td><img src="covers/thehobbit.jpg" alt="The hoobit book cover"></td>
-                <td>The Hobbit</td>
-                <td>J. R. R. Tolkien</td>
-                <td>310</td>
-                <td>Yes</td>
-                <td>The Hobbit is set within Tolkien's fictional universe and follows the quest of home-loving Bilbo Baggins, the titular hobbit, to win a share of the treasure guarded by Smaug the dragon. Bilbo's journey takes him from light-hearted, rural surroundings into more sinister territory.</td>
-            </tr>
-        </table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Page</th>
+                    <th>Read?</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table> 
 
 
     <script src="script.js"></script>
