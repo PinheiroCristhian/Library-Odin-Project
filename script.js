@@ -1,4 +1,4 @@
-let addNewBook, bookTitle, bookAuthor, bookPages, bookRead, addBookScreen, addBookScreenBtn, backBtn, newBook, tbody, deleteBtn;
+let addNewBook, bookTitle, bookAuthor, bookPages, bookRead, addBookScreen, addBookScreenBtn, backBtn, newBook, tbody, deleteBtn, books, td;
 addBookScreen = document.querySelector('form');
 addBookScreenBtn = document.querySelector('#add-new-book')
 addBookBtn = document.querySelector('#submitBtn');
@@ -35,7 +35,6 @@ function addBookToLibrary(display) {
         if (bookTitle && bookAuthor && bookPages) {
             bookRead.forEach(readBtn => {
                 if (readBtn.checked) {
-                    console.log('worked');
                     newBook = new Books();
                     newBook.title = bookTitle;
                     newBook.author = bookAuthor;
@@ -46,14 +45,13 @@ function addBookToLibrary(display) {
                     myLibrary.push(newBook);
                     display();
                     deleteBook();
+                    changeReadStatus();
                     myLibrary.pop();
                     addBookScreen.style.display = 'none';
 
                 }
             });
             
-        } else {
-            console.log('11111')
         }
         
 
@@ -92,12 +90,32 @@ function displayBookOnPage() {
 function deleteBook() {
 
     deleteBtn = document.querySelectorAll('span');
-    
+    books = document.querySelectorAll('tr');    
     deleteBtn.forEach(eachBtn => {
         eachBtn.addEventListener('click', () => {
-            console.log(eachBtn.dataset.id);
+            books.forEach(eachTr => {
+                if (eachBtn.dataset.id === eachTr.dataset.id) {
+                    eachTr.style.display = 'none';
+                }
+            });
+            
+
         });
     });
+}
+
+function changeReadStatus() {
+    td = document.querySelectorAll('td');
+    td.forEach(eachTd => {
+        eachTd.addEventListener('click', () => {
+            if (eachTd.textContent === 'yes') {
+                eachTd.textContent = 'no';
+            } else if (eachTd.textContent === 'no'){
+                eachTd.textContent = 'yes';
+            }
+        });
+    });
+
 }
 
 
