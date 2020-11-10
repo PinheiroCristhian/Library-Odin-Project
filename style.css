@@ -28,3 +28,10 @@ form {
     height: 100vh;
     display: none;
 }
+
+span{
+
+    padding-left: 45%;
+    color: #f00;
+    cursor: pointer;
+}
