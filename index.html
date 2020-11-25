@@ -3,51 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
+    <title>Online Library</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button id="addBookToLibraryBtn">Add Book to Library</button>
     <form>
-        <div class="form">
-            <div class="book-info">
-                Book Title <br>
-                <input type="text" placeholder="title" id="book-title" required>
-            </div>
-            <div class="book-info">
-                Author <br>
-                <input type="text" placeholder="Author" id="book-author" required>
-            </div>
-            <div class="book-info">
-                Pages <br>
-                <input type="number" id="book-pages" required>
-            </div>
-            <div class="book-info">
-                Read? yes<input type="radio" name="read" class="book-read" value="yes" required>
-                no<input type="radio" name="read" class="book-read" value="no" required>
-            </div>
-            <input type="button" value="back" id="backBtn">
-
-            <input type="button" value="Submit" id="submitBtn">
+      
+        <label for="bookTitle">
+            <p>Book Title</p>
+            <input type="text" placeholder="Ex: The Hobbit" id="bookTitle">
+        </label>
+        <label for="bookAuthor">
+            <p>Book Author</p>
+            <input type="text" placeholder="Ex: J. R. R. TOLKIEN" id="bookAuthor">
+        </label>
+        <label for="bookPage">
+            <p>Book Pages</p>
+            <input type="number" placeholder="Ex: 310" id="bookPage">
+        </label>
+        <div id="radioBtns">
+            <p>Have you read this book?</p>
+            <label for="yes">
+                Yes <input type="radio" name="read" id="yes" value="yes">
+            </label>
+            
+            <label for="no">
+                No <input type="radio" name="read" id="no" value="no">
+            </label>
+                       
         </div>
+
+        <label>
+
+            <a href="#" id="addBook">Add Book</a>
+            <a href="#" id="getBack">Back</a>
+        </label>
     </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Book Title</th>    
+                <th>Book Author</th>
+                <th>Book Pages</th>
+                <th>Read?</th>
+                <th>Delete?</th>
+            </tr>
+        </thead>
+        <tbody>
 
-
-        <a href="#" id="add-new-book">Add new Book</a>
-        <table>
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Page</th>
-                    <th>Read?</th>
-                    <th>Delete?</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table> 
-
+        </tbody>
+    </table>
 
     <script src="script.js"></script>
 </body>
