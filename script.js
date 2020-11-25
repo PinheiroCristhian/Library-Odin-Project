@@ -1,9 +1,5 @@
 let id = 0;
-const myLibrary = [
-
-
-
-];
+const myLibrary = [];
 
 class Books {
 
@@ -151,20 +147,24 @@ function displayBooks() {
         tbody.appendChild(tr);
         tr.setAttribute('data-id', id);
         for (let key in book) {
+
             const td = document.createElement('td');
-            //tr.appendChild(td);
+
             if (key !== 'id') { //it should not display the ID on the table.
+
                 tr.appendChild(td);
+
                 if (book[key] === 'yes' || book[key] === 'no') {
                     td.innerHTML = `<span class="read" data-id="${id}">${book[key]}</span>`
                 }
                 else if (key === 'delete') {
+
                     td.innerHTML = `<span class="delete" data-id="${id}">X</span>`;
                     book.id = id;
                     id++;
+
                 } else {
                     td.textContent = book[key];
-                    
                 }
                 
             }
