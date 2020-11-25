@@ -101,7 +101,7 @@ function deleteBook() {
         
             myLibrary.forEach(book => {
 
-                if (Number(btn.dataset.id) === Number(book.id)) { //if found a book with the same id as span
+                if (Number(btn.dataset.id) === Number(book.id)) { //if found a book with the same id as btn
                     myLibrary.splice(myLibrary.indexOf(book), 1);  //it's going to remove it from array
                     displayBooks(); //then display the leftover books on the page again
                     return deleteBook();
